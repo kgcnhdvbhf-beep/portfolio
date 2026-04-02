@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Hosny Said | Junior Full-Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Mostafa Hosny Said, Junior Full-Stack Developer and Medical Informatics Student.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">MH<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="greeting">Hello, I'm</h2>
+            <h1 class="name">Mostafa Hosny Said</h1>
+            <h3 class="role">Junior Full-Stack Developer <br><span>&</span> Medical Informatics Student</h3>
+            <p class="summary">Passionate about coding, technology, and building a strong foundation in both frontend
+                and backend development to help improve healthcare systems.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am currently a second-year student specializing in <strong>Medical Informatics</strong>, with a
+                        growing interest in software development. My journey in programming started with HTML and CSS,
+                        and I have also gained basic knowledge of Java.</p>
+                    <p>I continuously work on improving my skills and expanding my understanding of development tools
+                        like GitHub. I believe in persistence, discipline, and continuous learning as the keys to
+                        success. Even when progress feels slow, I remain committed to pushing forward and achieving my
+                        goals through consistent effort.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="img/a5c45947-a0bc-401e-9918-0225078fd0f8.jpg" alt="Mostafa Hosny Said" class="profile-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML & CSS</h3>
+                    <p>Frontend Web Development & Simple Layout Designs</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☕</div>
+                    <h3>Java</h3>
+                    <p>Beginner-Level Programming & Object-Oriented Fundamentals</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐙</div>
+                    <h3>GitHub</h3>
+                    <p>Project Setup, Source Code Management & Version Control</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💡</div>
+                    <h3>Problem Solving</h3>
+                    <p>Self-Learning, Persistence, and Technical Discipline</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #6e8efb, #a777e3);"></div>
+                    <div class="project-info">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>A responsive website to showcase my skills and profile, featuring a modern dark theme and
+                            smooth animations.</p>
+                        <a href="#" class="project-link">Coming Soon 🔗</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #0cebeb, #20e3b2, #29ffc6);">
+                    </div>
+                    <div class="project-info">
+                        <h3>Basic Java Practice Projects</h3>
+                        <p>Small programs built to understand essential Java fundamentals and software engineering
+                            concepts.</p>
+                        <a href="#" class="project-link">Coming Soon 🔗</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f12711, #f5af19);"></div>
+                    <div class="project-info">
+                        <h3>HTML & CSS Layout Designs</h3>
+                        <p>Practice projects focusing on building robust web layouts and responsive UI structures.</p>
+                        <a href="#" class="project-link">Coming Soon 🔗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                        <div class="input-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Interested in collaborating or have a question? Feel free to reach out. I'm always open to
+                        discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/kgcnhdvbhf-beep" target="_blank" class="social-link">GitHub</a>
+                        <a href="https://www.linkedin.com/in/mostafa-hosny-9958153a7" target="_blank"
+                            class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mostafa Hosny Said. All rights reserved.</p>
+        <a href="#home" class="back-to-top">↑ Back to Top</a>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
