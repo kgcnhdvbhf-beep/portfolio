@@ -4,185 +4,647 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mostafa Hosny Said | Junior Full-Stack Developer</title>
+    <title>Mostafa Hosny Said | Junior Full-Stack & Medical Informatics Developer</title>
     <meta name="description"
-        content="Portfolio of Mostafa Hosny Said, Junior Full-Stack Developer and Medical Informatics Student.">
+        content="Portfolio of Mostafa Hosny Said - Medical Informatics Student & Junior Full-Stack Developer specializing in HTML, CSS, JavaScript, Java, and Healthcare Tech.">
+    <meta name="theme-color" content="#070a0f">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
         rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">MH<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Top Reading Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Ambient Glow Lights -->
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-3"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="container">
+            <a href="#home" class="logo" aria-label="Mostafa Hosny Said home">
+                MH<span>.</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+        </div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h2 class="greeting">Hello, I'm</h2>
-            <h1 class="name">Mostafa Hosny Said</h1>
-            <h3 class="role">Junior Full-Stack Developer <br><span>&</span> Medical Informatics Student</h3>
-            <p class="summary">Passionate about coding, technology, and building a strong foundation in both frontend
-                and backend development to help improve healthcare systems.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
+    <!-- Mobile Navigation Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <span class="logo">MH<span>.</span></span>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Navigation</span>
         </div>
-        <div class="hero-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
+        <ul class="drawer-nav">
+            <li><a href="#home" class="drawer-link">Home</a></li>
+            <li><a href="#about" class="drawer-link">About Me</a></li>
+            <li><a href="#skills" class="drawer-link">Skills Matrix</a></li>
+            <li><a href="#projects" class="drawer-link">Selected Work</a></li>
+            <li><a href="#contact" class="drawer-link">Get In Touch</a></li>
+        </ul>
+        <div style="font-size: 0.8rem; color: var(--text-dim); text-align: center;">
+            &copy; 2026 Mostafa Hosny Said
+        </div>
+    </aside>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span>Available for Internships & Projects</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Mostafa Hosny</span>
+                </h1>
+                
+                <p class="hero-role">Medical Informatics Student & Full-Stack Learner</p>
+                
+                <p class="hero-bio">
+                    Building clean, accessible, and responsive web applications at the intersection of modern frontend code, Java programming, and healthcare technology.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Explore Projects</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Contact Me</span>
+                    </a>
+
+                    <button class="btn btn-secondary" id="copyEmailBtn" data-email="mostafa.hosny@example.com" title="Copy Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copy Email</span>
+                    </button>
+                </div>
+
+                <div class="quick-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Live Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2nd</div>
+                        <div class="stat-label">Academic Year</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">HTML/CSS</div>
+                        <div class="stat-label">Frontend Core</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Java</div>
+                        <div class="stat-label">OOP Track</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="avatar-ring-wrapper">
+                    <img src="img/a5c45947-a0bc-401e-9918-0225078fd0f8.jpg" alt="Mostafa Hosny Said" class="avatar-img">
+                    
+                    <div class="floating-badge badge-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2.5">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <span>HTML5 & CSS3</span>
+                    </div>
+
+                    <div class="floating-badge badge-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                        <span>Medical Informatics</span>
+                    </div>
+
+                    <div class="floating-badge badge-3">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        <span>Git & GitHub</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am currently a second-year student specializing in <strong>Medical Informatics</strong>, with a
-                        growing interest in software development. My journey in programming started with HTML and CSS,
-                        and I have also gained basic knowledge of Java.</p>
-                    <p>I continuously work on improving my skills and expanding my understanding of development tools
-                        like GitHub. I believe in persistence, discipline, and continuous learning as the keys to
-                        success. Even when progress feels slow, I remain committed to pushing forward and achieving my
-                        goals through consistent effort.</p>
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-kicker">About Me</span>
+                    <h2 class="section-title">Bridging Healthcare & Technology</h2>
+                    <p class="section-subtitle">
+                        Building a strong foundation in software engineering, medical informatics, and clean web development.
+                    </p>
                 </div>
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <img src="img/a5c45947-a0bc-401e-9918-0225078fd0f8.jpg" alt="Mostafa Hosny Said" class="profile-img" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3>HTML & CSS</h3>
-                    <p>Frontend Web Development & Simple Layout Designs</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">☕</div>
-                    <h3>Java</h3>
-                    <p>Beginner-Level Programming & Object-Oriented Fundamentals</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🐙</div>
-                    <h3>GitHub</h3>
-                    <p>Project Setup, Source Code Management & Version Control</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">💡</div>
-                    <h3>Problem Solving</h3>
-                    <p>Self-Learning, Persistence, and Technical Discipline</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #6e8efb, #a777e3);"></div>
-                    <div class="project-info">
-                        <h3>Personal Portfolio Website</h3>
-                        <p>A responsive website to showcase my skills and profile, featuring a modern dark theme and
-                            smooth animations.</p>
-                        <a href="#" class="project-link">Coming Soon 🔗</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #0cebeb, #20e3b2, #29ffc6);">
-                    </div>
-                    <div class="project-info">
-                        <h3>Basic Java Practice Projects</h3>
-                        <p>Small programs built to understand essential Java fundamentals and software engineering
-                            concepts.</p>
-                        <a href="#" class="project-link">Coming Soon 🔗</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #f12711, #f5af19);"></div>
-                    <div class="project-info">
-                        <h3>HTML & CSS Layout Designs</h3>
-                        <p>Practice projects focusing on building robust web layouts and responsive UI structures.</p>
-                        <a href="#" class="project-link">Coming Soon 🔗</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <div class="contact-form">
-                    <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
-                        <div class="input-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>
+                            I am a second-year <strong>Medical Informatics</strong> student with a deep passion for web development and software engineering. My educational journey combines health technology, data systems, and computer programming.
+                        </p>
+                        <p>
+                            I started my coding path mastering HTML5 and CSS3 to build responsive, user-friendly layouts. I am actively expanding my skillset into modern JavaScript, Java Object-Oriented Programming (OOP), and GitHub collaborative workflows.
+                        </p>
+                        <div class="highlight-box">
+                            <strong>My Mission:</strong> To write readable, reliable code that solves real-world challenges—whether in health information systems or dynamic web apps.
                         </div>
-                        <div class="input-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+
+                    <div class="specialties-grid reveal">
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <h3>Medical Tech</h3>
+                            <p>Understanding medical information systems, clinical data workflows, and health technology standards.</p>
                         </div>
-                        <div class="input-group">
-                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3>Frontend UI/UX</h3>
+                            <p>Crafting responsive, accessible, and high-performance websites using semantic HTML & CSS.</p>
                         </div>
-                        <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>Interested in collaborating or have a question? Feel free to reach out. I'm always open to
-                        discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-                    <div class="social-links">
-                        <a href="https://github.com/kgcnhdvbhf-beep" target="_blank" class="social-link">GitHub</a>
-                        <a href="https://www.linkedin.com/in/mostafa-hosny-9958153a7" target="_blank"
-                            class="social-link">LinkedIn</a>
+
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Java & Logic</h3>
+                            <p>Developing strong algorithmic problem-solving habits and Object-Oriented design principles.</p>
+                        </div>
+
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 7h-9"></path>
+                                    <path d="M14 17H5"></path>
+                                    <circle cx="17" cy="17" r="3"></circle>
+                                    <circle cx="7" cy="7" r="3"></circle>
+                                </svg>
+                            </div>
+                            <h3>Git & Versioning</h3>
+                            <p>Managing repositories, commit histories, and hosting projects via GitHub Pages.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-kicker">Skill Set</span>
+                    <h2 class="section-title">Technical Matrix & Tools</h2>
+                    <p class="section-subtitle">Explore my current tech stack, tools, and learning roadmap.</p>
+                </div>
+
+                <div class="filter-tabs reveal">
+                    <button class="filter-btn skill-filter-btn active" data-filter="all">All Skills</button>
+                    <button class="filter-btn skill-filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn skill-filter-btn" data-filter="backend">Programming & Java</button>
+                    <button class="filter-btn skill-filter-btn" data-filter="tools">Tools & Mindset</button>
+                </div>
+
+                <div class="skills-grid reveal">
+                    <!-- HTML5 -->
+                    <article class="skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <span class="skill-tag">Frontend</span>
+                        </div>
+                        <h3>HTML5 & Semantics</h3>
+                        <p>Semantic document structures, accessibility tags (a11y), forms, and clean markup.</p>
+                        <div class="skill-level-bar">
+                            <div class="skill-level-fill" style="width: 90%;"></div>
+                        </div>
+                    </article>
+
+                    <!-- CSS3 -->
+                    <article class="skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20.25L4.75 18 3 3h18l-1.75 15L12 20.25z"></path>
+                                </svg>
+                            </div>
+                            <span class="skill-tag">Frontend</span>
+                        </div>
+                        <h3>CSS3 & Modern Layouts</h3>
+                        <p>Flexbox, CSS Grid, custom variables, responsive media queries, glassmorphism, and keyframe animations.</p>
+                        <div class="skill-level-bar">
+                            <div class="skill-level-fill" style="width: 88%;"></div>
+                        </div>
+                    </article>
+
+                    <!-- JavaScript -->
+                    <article class="skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path>
+                                </svg>
+                            </div>
+                            <span class="skill-tag">Frontend</span>
+                        </div>
+                        <h3>JavaScript (ES6+)</h3>
+                        <p>DOM manipulation, event handling, dynamic UI updates, array methods, and async operations.</p>
+                        <div class="skill-level-bar">
+                            <div class="skill-level-fill" style="width: 75%;"></div>
+                        </div>
+                    </article>
+
+                    <!-- Java -->
+                    <article class="skill-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <span class="skill-tag">Programming</span>
+                        </div>
+                        <h3>Java Basics & OOP</h3>
+                        <p>Core syntax, classes, inheritance, encapsulation, objects, and console applications.</p>
+                        <div class="skill-level-bar">
+                            <div class="skill-level-fill" style="width: 70%;"></div>
+                        </div>
+                    </article>
+
+                    <!-- Git & GitHub -->
+                    <article class="skill-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="18" cy="18" r="3"></circle>
+                                    <circle cx="6" cy="6" r="3"></circle>
+                                    <path d="M6 9v12"></path>
+                                    <path d="M18 9a9 9 0 0 1-9 9"></path>
+                                </svg>
+                            </div>
+                            <span class="skill-tag">Workflow</span>
+                        </div>
+                        <h3>Git & GitHub Pages</h3>
+                        <p>Version control management, repository commits, and deploying live websites on GitHub Pages.</p>
+                        <div class="skill-level-bar">
+                            <div class="skill-level-fill" style="width: 82%;"></div>
+                        </div>
+                    </article>
+
+                    <!-- Medical Informatics -->
+                    <article class="skill-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <span class="skill-tag">Domain Knowledge</span>
+                        </div>
+                        <h3>Medical Informatics</h3>
+                        <p>Healthcare data concepts, clinical software structures, and medical information management.</p>
+                        <div class="skill-level-bar">
+                            <div class="skill-level-fill" style="width: 78%;"></div>
+                        </div>
+                    </article>
+
+                    <!-- Problem Solving -->
+                    <article class="skill-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 0 1-2 2h-0a2 2 0 0 1-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <span class="skill-tag">Mindset</span>
+                        </div>
+                        <h3>Problem Solving & Debugging</h3>
+                        <p>Deconstructing complex issues into smaller steps, patient debugging, and clean organization.</p>
+                        <div class="skill-level-bar">
+                            <div class="skill-level-fill" style="width: 85%;"></div>
+                        </div>
+                    </article>
+
+                    <!-- Responsive UI/UX -->
+                    <article class="skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <span class="skill-tag">Frontend</span>
+                        </div>
+                        <h3>Mobile-First & UI Aesthetics</h3>
+                        <p>Designing modern dark themes, responsive mobile menus, glassmorphic cards, and crisp typography.</p>
+                        <div class="skill-level-bar">
+                            <div class="skill-level-fill" style="width: 85%;"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-kicker">Selected Work</span>
+                    <h2 class="section-title">Live Projects & Demos</h2>
+                    <p class="section-subtitle">Explore live published projects hosted on GitHub Pages.</p>
+                </div>
+
+                <div class="filter-tabs reveal">
+                    <button class="filter-btn project-filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn project-filter-btn" data-filter="live">Live Sites</button>
+                    <button class="filter-btn project-filter-btn" data-filter="practice">Practice Works</button>
+                </div>
+
+                <div class="projects-grid reveal">
+                    <!-- Project 1: Personal Links Page -->
+                    <article class="project-card" data-category="live">
+                        <div class="project-preview">
+                            <img src="img/project-links.png" alt="Personal Links Page Preview" class="project-img">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">GitHub Pages</span>
+                            </div>
+                            <h3>Personal Links Hub</h3>
+                            <p>A minimalist personal link aggregator built to organize essential profiles, social links, and contact channels in one responsive place.</p>
+                            <div class="project-links">
+                                <a href="https://kgcnhdvbhf-beep.github.io/link/" target="_blank" rel="noopener" class="link-btn">
+                                    <span>Open Live Site</span>
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/kgcnhdvbhf-beep/link" target="_blank" rel="noopener" class="link-btn" style="color: var(--text-muted);">
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Despacito Music Page -->
+                    <article class="project-card" data-category="practice">
+                        <div class="project-preview">
+                            <div class="project-mockup" style="background: linear-gradient(135deg, #1e1b4b, #311042);">
+                                <div class="mockup-icon" style="background: rgba(236, 72, 153, 0.2); color: var(--accent-pink);">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 18V5l12-2v13"></path>
+                                        <circle cx="6" cy="18" r="3"></circle>
+                                        <circle cx="18" cy="16" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="mockup-title">Despacito Page</div>
+                                <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">Interactive Music Layout</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">UI Design</span>
+                            </div>
+                            <h3>Despacito Showcase Page</h3>
+                            <p>A creative practice web page focusing on media styling, custom CSS components, page layout structure, and online publishing.</p>
+                            <div class="project-links">
+                                <a href="https://kgcnhdvbhf-beep.github.io/Despacito/" target="_blank" rel="noopener" class="link-btn">
+                                    <span>Open Live Site</span>
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Developer Portfolio V2 -->
+                    <article class="project-card" data-category="live">
+                        <div class="project-preview">
+                            <div class="project-mockup" style="background: linear-gradient(135deg, #064e3b, #0f172a);">
+                                <div class="mockup-icon" style="background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald);">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="mockup-title">Developer Portfolio V2</div>
+                                <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">Glassmorphism & Interactivity</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">UX/UI</span>
+                            </div>
+                            <h3>Portfolio V2 Architecture</h3>
+                            <p>An upgraded personal portfolio featuring interactive skill filtering, ScrollSpy navigation, glassmorphic dark theme, toast alert system, and mobile drawer menu.</p>
+                            <div class="project-links">
+                                <a href="#home" class="link-btn">
+                                    <span>Viewing Current Page</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" style="background: rgba(255, 255, 255, 0.015);">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-kicker">Get In Touch</span>
+                    <h2 class="section-title">Let's Connect & Collaborate</h2>
+                    <p class="section-subtitle">Open for beginner-friendly projects, internships, and tech discussions.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <p>
+                            Whether you have feedback on my projects, an internship opportunity, or want to connect about Medical Informatics and web development, feel free to reach out!
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="contact-item-text">
+                                    <label>GitHub Profile</label>
+                                    <span>github.com/kgcnhdvbhf-beep</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </div>
+                                <div class="contact-item-text">
+                                    <label>LinkedIn Profile</label>
+                                    <span>linkedin.com/in/mostafa-hosny</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-bar">
+                            <a href="https://github.com/kgcnhdvbhf-beep" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mostafa-hosny-9958153a7" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card reveal">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Ahmed Ali" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Project Inquiry / Feedback" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="4" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <span>Send Message</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Alert Element -->
+    <div id="toast" class="toast">
+        <div class="toast-icon"></div>
+        <div>
+            <div class="toast-title">Notification</div>
+            <div class="toast-message">Your message details here.</div>
+        </div>
+    </div>
+
+    <!-- Back to Top Floating Progress Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg class="progress-ring" width="50" height="50">
+            <circle class="progress-ring-circle" r="22" cx="25" cy="25"/>
+        </svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Mostafa Hosny Said. All rights reserved.</p>
-        <a href="#home" class="back-to-top">↑ Back to Top</a>
+        <div class="container footer-content">
+            <div class="logo">MH<span>.</span></div>
+            <p>&copy; 2026 Mostafa Hosny Said. Built with HTML5, CSS3 & JavaScript.</p>
+        </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
